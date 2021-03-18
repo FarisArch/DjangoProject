@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <title> Blog Home</title>
+    <header> This is blog website under development </header>
+    {% for post in posts%}
+    <article>
+        <h2><a href ="">{{post.title}}</a></h2>
+        <time> {{post.pub_date}}</time>
+        <p> {{post.text}} </p>
+    </article>
+    {% endfor %}
+<html>
