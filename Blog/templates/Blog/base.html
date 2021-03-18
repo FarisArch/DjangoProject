@@ -7,17 +7,7 @@
          <link rel="preconnect" href="https://fonts.gstatic.com">
          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
     </head>
-    <title> Blog Home</title>
-    <header class='page-header'> This is blog website under development </header>
-    {% for post in posts%}
-    <article>
-        <div class = "title-header">
-            <h2><a href ="{% url 'post_detail' pk=post.pk %}" >{{post.title}}</a></h2>
-        </div>
-        <time> {{post.pub_date}}</time>
-        <div class='paragraph'>
-            <p> {{post.text}} </p>
-        </div>
-    </article>
-    {% endfor %}
+
+    {% block content %}
+    {% endblock %}
 <html>
